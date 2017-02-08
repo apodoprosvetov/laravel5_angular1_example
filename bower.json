@@ -1,0 +1,23 @@
+{
+  "name": "laravel_angular_v1",
+  "version": "0.0.1",
+  "license": "Private",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.0",
+    "jquery": "~2.1.4",
+    "angular-resource": "~1.4.0",
+    "bootstrap": "~3.3.4",
+    "fontawesome": "~4.3.0",
+    "angular-ui-router": "~0.2.18",
+    "angular-bootstrap": "~0.14.0",
+    "moment": "~2.10.3",
+    "underscore": "~1.8.3"
+  }
+}

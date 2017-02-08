@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-sm-12">
+        <div class="col-sm-6">
+            <h3>{{property.name}}</h3>
+            <p>{{property.description}}</p>
+        </div>
+        <div class="col-sm-6">
+            <property-address property="property"></property-address>
+        </div>
+    </div>
+</div>
+<div class="row" ng-if="property.units.length">
+    <h3>Units</h3>
+    <div class="col-sm-12">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Unit #</th>
+                    <th>SqFeet</th>
+                    <th>Bedrooms</th>
+                    <th>Bathrooms</th>
+                    <th>Rent</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="unit in property.units">
+                    <td>{{unit.unit_number}}</td>
+                    <td ng-bind-html="unit.sqfeet | sqfeet"></td>
+                    <td>{{unit.bedrooms}}</td>
+                    <td>{{unit.bathrooms}}</td>
+                    <td>{{unit.rental_amount | rent:unit.rental_type}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

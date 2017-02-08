@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-sm-12">
+        <label class="col-sm-4">Property name:</label>
+        <div class="col-sm-8">
+            <input type="text" class="form-control"
+                   placeholder="Search by Property Name"
+                   ng-model="filter_property_name" >
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="col-sm-4 fa-border" ng-repeat="property in properties | filter:{name:filter_property_name}">
+            <div class="col-sm-12">
+                <div class="col-sm-8">
+                    <property-address property="property"></property-address>
+                </div>
+                <div class="col-sm-4">
+                    <a href="/property/{{property.id}}" ui-sref="property({ propertyId: property.id })" ng-bind-html="property.name | highlight:filter_property_name"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
